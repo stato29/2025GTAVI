@@ -10,53 +10,85 @@
       padding: 0;
       font-family: Arial, sans-serif;
       height: 100%;
+      overflow: auto; /* Enable scrolling */
+    }
+
+    .section {
+      height: 100vh; /* Full viewport height for each section */
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .background-photo {
-      flex: 1;
       background-image: url('https://i.ibb.co/g3NC0MG/BG-GTAVI.jpg'); /* Replace with your background image URL */
       background-size: cover;
       background-position: center;
     }
 
     .video-container {
-      position: fixed;
-      bottom: -50%; /* Lowered the container by 50% */
-      width: 100%;
       background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for better visibility */
-      padding: 10px 0;
+      color: white; /* Text color for visibility */
       text-align: center;
+      padding: 20px;
     }
 
     .contact-text {
       font-size: 18px;
-      color: white; /* Updated text color to white */
       margin-bottom: 10px;
       font-weight: bold;
     }
 
     video {
       width: 90%;
-      max-width: 600px; /* Adjust as needed */
+      max-width: 600px;
       height: auto;
       border: 2px solid #fff;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      color: white;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, 10px);
+      }
     }
   </style>
 </head>
 <body>
   <!-- Background Section -->
-  <div class="background-photo"></div>
+  <div class="section background-photo">
+    <div class="scroll-down" onclick="scrollToVideo()">⬇ Scroll Down ⬇</div>
+  </div>
 
   <!-- Video Section -->
-  <div class="video-container">
+  <div class="section video-container">
     <div class="contact-text">CONTACT ADDRESS - ENTER HERE THE CA</div>
     <video controls>
       <source src="https://www.dropbox.com/scl/fi/rk2k3bbuj4u5kyqtfczls/Grand-Theft-Auto-VI-Trailer-1.mp4?rlkey=pgvc7jjaocxrubmbwj1re50d3&raw=1" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+
+  <script>
+    function scrollToVideo() {
+      const videoSection = document.querySelector('.video-container');
+      videoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
 
