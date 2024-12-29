@@ -15,26 +15,27 @@
     }
 
     .background-photo {
-      flex: 1;
+      flex: 4; /* Takes 4/5 of the page */
       background-image: url('https://i.ibb.co/g3NC0MG/BG-GTAVI.jpg'); /* Replace with your background image URL */
       background-size: cover;
       background-position: center;
     }
 
     .video-container {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      flex: 1; /* Takes 1/5 of the page */
       background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for better visibility */
-      padding: 10px 0;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white; /* Text color for visibility */
     }
 
     .contact-text {
       font-size: 18px;
-      color: white; /* Updated text color to white */
       margin-bottom: 10px;
       font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Add text shadow for contrast */
     }
 
     video {
@@ -49,7 +50,7 @@
   <!-- Background Section -->
   <div class="background-photo"></div>
 
-  <!-- Video Section at Bottom -->
+  <!-- Video Section -->
   <div class="video-container">
     <div class="contact-text">CONTACT ADDRESS - ENTER HERE THE CA</div>
     <video controls>
@@ -59,3 +60,4 @@
   </div>
 </body>
 </html>
+
