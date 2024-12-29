@@ -3,50 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Popup</title>
+  <title>Video at Bottom</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .background-photo {
-      height: 100vh;
+      flex: 1;
       background-image: url('https://i.ibb.co/g3NC0MG/BG-GTAVI.jpg'); /* Replace with your background image URL */
       background-size: cover;
       background-position: center;
     }
 
     .video-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Optional: Semi-transparent background for better visibility */
+      padding: 10px 0;
+      text-align: center;
     }
 
     video {
-      max-width: 100%;
+      width: 90%;
+      max-width: 600px; /* Adjust as needed */
       height: auto;
-      border: 2px solid #000;
-      margin-bottom: 10px;
-    }
-
-    .arrow {
-      font-size: 20px;
-      color: #555;
-      margin-top: 10px;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+      border: 2px solid #fff;
     }
   </style>
 </head>
@@ -54,13 +42,12 @@
   <!-- Background Section -->
   <div class="background-photo"></div>
 
-  <!-- Video Popup -->
+  <!-- Video Section at Bottom -->
   <div class="video-container">
     <video controls>
-      <source src="https://www.dropbox.com/scl/fi/rk2k3bbuj4u5kyqtfczls/Grand-Theft-Auto-VI-Trailer-1.mp4?rlkey=pgvc7jjaocxrubmbwj1re50d3&raw=1" type="video/mp4">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> <!-- Replace with your direct video URL -->
       Your browser does not support the video tag.
     </video>
-    <div class="arrow">⬇ Scroll Down ⬇</div>
   </div>
 </body>
 </html>
