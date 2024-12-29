@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video at Bottom</title>
+  <title>GTA VI 2025</title>
   <style>
     body, html {
       margin: 0;
@@ -25,14 +25,28 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.8); /* Optional: Semi-transparent background for better visibility */
-      padding: 10px 0;
+      background: linear-gradient(45deg, #ff00ff, #ff1493); /* Neon purple-pink gradient */
+      color: white;
       text-align: center;
+      padding: 20px 0;
+    }
+
+    .contact-text {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+      width: 200px;
+      margin: 10px auto;
+      display: block;
     }
 
     video {
       width: 90%;
-      max-width: 600px; /* Adjust as needed */
+      max-width: 600px;
       height: auto;
       border: 2px solid #fff;
     }
@@ -42,8 +56,14 @@
   <!-- Background Section -->
   <div class="background-photo"></div>
 
-  <!-- Video Section at Bottom -->
+  <!-- Logo Section -->
+  <div class="logo-container">
+    <img src="/mnt/data/BG GTAVI.png" alt="GTA VI Logo" class="logo">
+  </div>
+
+  <!-- Video Section -->
   <div class="video-container">
+    <div class="contact-text">CONTACT ADDRESS - ENTER HERE THE CA</div>
     <video controls>
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> <!-- Replace with your direct video URL -->
       Your browser does not support the video tag.
@@ -51,3 +71,4 @@
   </div>
 </body>
 </html>
+
