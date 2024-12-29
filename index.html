@@ -15,27 +15,26 @@
     }
 
     .background-photo {
-      flex: 4; /* Takes 4/5 of the page */
+      flex: 1;
       background-image: url('https://i.ibb.co/g3NC0MG/BG-GTAVI.jpg'); /* Replace with your background image URL */
       background-size: cover;
       background-position: center;
     }
 
     .video-container {
-      flex: 1; /* Takes 1/5 of the page */
+      position: fixed;
+      bottom: -50%; /* Lowered the container by 50% */
+      width: 100%;
       background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for better visibility */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white; /* Text color for visibility */
+      padding: 10px 0;
+      text-align: center;
     }
 
     .contact-text {
       font-size: 18px;
+      color: white; /* Updated text color to white */
       margin-bottom: 10px;
       font-weight: bold;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Add text shadow for contrast */
     }
 
     video {
