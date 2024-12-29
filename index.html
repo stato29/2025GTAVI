@@ -18,6 +18,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
 
     .background-photo {
@@ -28,22 +29,29 @@
 
     .video-container {
       background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for better visibility */
-      color: white; /* Text color for visibility */
-      text-align: top;
+      color: white;
+      text-align: center;
       padding: 20px;
+      position: relative;
     }
 
     .contact-text {
-      font-size: 18px;
-      margin-bottom: 10px;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      color: white;
       font-weight: bold;
+      z-index: 10;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     }
 
     video {
-      width: 300%;
-      max-width: 600px;
-      height: auto;
-      border: 2px solid #fff;
+      width: 100%; /* Fill the width of the section */
+      height: 90vh; /* Make the video almost full height */
+      border: none;
+      object-fit: cover;
     }
 
     .scroll-down {
@@ -91,4 +99,3 @@
   </script>
 </body>
 </html>
-
